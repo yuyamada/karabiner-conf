@@ -1,0 +1,25 @@
+{
+  "title": "left ctrl + d to BS",
+  "rules": [
+    {
+      "description": "left ctrl + d to BS",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": ["left_control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
