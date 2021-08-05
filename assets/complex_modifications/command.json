@@ -1,8 +1,8 @@
 {
-  "title": "command-{d,q,w}を長押しで実行する",
+  "title": "command-{d,q,w,h}を長押しで実行する",
   "rules": [
     {
-      "description": "command-{d,q,w}を長押しで実行する",
+      "description": "command-{d,q,w,h}を長押しで実行する",
       "manipulators": [
         {
           "type": "basic",
@@ -10,7 +10,7 @@
             "key_code": "d",
             "modifiers": { "mandatory": [ "command" ], "optional": [ "caps_lock" ] }
           },
-          "parameters": { "basic.to_if_held_down_threshold_milliseconds": 100 },
+          "parameters": { "basic.to_if_held_down_threshold_milliseconds": 300 },
           "to_if_held_down": [
             { 
               "key_code": "d",
@@ -25,7 +25,7 @@
             "key_code": "q",
             "modifiers": { "mandatory": [ "command" ], "optional": [ "caps_lock" ] }
           },
-          "parameters": { "basic.to_if_held_down_threshold_milliseconds": 100 },
+          "parameters": { "basic.to_if_held_down_threshold_milliseconds": 300 },
           "to_if_held_down": [
             { 
               "key_code": "q",
@@ -40,10 +40,25 @@
             "key_code": "w",
             "modifiers": { "mandatory": [ "command" ], "optional": [ "caps_lock" ] }
           },
-          "parameters": { "basic.to_if_held_down_threshold_milliseconds": 100 },
+          "parameters": { "basic.to_if_held_down_threshold_milliseconds": 300 },
           "to_if_held_down": [
             { 
               "key_code": "w",
+              "modifiers": [ "command" ],
+              "repeat": false
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": { "mandatory": [ "command" ], "optional": [ "caps_lock" ] }
+          },
+          "parameters": { "basic.to_if_held_down_threshold_milliseconds": 300 },
+          "to_if_held_down": [
+            { 
+              "key_code": "h",
               "modifiers": [ "command" ],
               "repeat": false
             }

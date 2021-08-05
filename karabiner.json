@@ -229,7 +229,7 @@
                         ]
                     },
                     {
-                        "description": "command-{d,q,w}を長押しで実行する",
+                        "description": "command-{d,q,w,h}を長押しで実行する",
                         "manipulators": [
                             {
                                 "from": {
@@ -244,7 +244,7 @@
                                     }
                                 },
                                 "parameters": {
-                                    "basic.to_if_held_down_threshold_milliseconds": 100
+                                    "basic.to_if_held_down_threshold_milliseconds": 300
                                 },
                                 "to_if_held_down": [
                                     {
@@ -270,7 +270,7 @@
                                     }
                                 },
                                 "parameters": {
-                                    "basic.to_if_held_down_threshold_milliseconds": 100
+                                    "basic.to_if_held_down_threshold_milliseconds": 300
                                 },
                                 "to_if_held_down": [
                                     {
@@ -296,11 +296,37 @@
                                     }
                                 },
                                 "parameters": {
-                                    "basic.to_if_held_down_threshold_milliseconds": 100
+                                    "basic.to_if_held_down_threshold_milliseconds": 300
                                 },
                                 "to_if_held_down": [
                                     {
                                         "key_code": "w",
+                                        "modifiers": [
+                                            "command"
+                                        ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ],
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.to_if_held_down_threshold_milliseconds": 300
+                                },
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "h",
                                         "modifiers": [
                                             "command"
                                         ],
